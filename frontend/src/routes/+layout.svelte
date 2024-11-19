@@ -3,4 +3,8 @@
 	let { children } = $props();
 </script>
 
-{@render children()}
+<div class="m-3">
+	<main>
+		{@render children()}
+	</main>
+</div>

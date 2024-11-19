@@ -1,17 +1,19 @@
 <script lang="ts">
-    import type { PageData } from './$types';
+	import type { PageData } from './$types';
 
-    let { data }: { data: PageData } = $props();
+	let { data }: { data: PageData } = $props();
 </script>
 
-<h1>Arquitectura de Sistemas de Software Dream Team Project</h1>
+<div class="flex flex-col">
+	<h1 class="text-xl">Arquitectura de Sistemas de Software Dream Team Project</h1>
 
-{#each data.posts as post}
-    <ul>
-        <li>
-            <a href={`posts/${post.id}`}>{post.title}</a>
-        </li>
-    </ul>
-{/each}
-
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+	<div class="m-3">
+		<ol class="ml-3 list-decimal">
+			{#each data.posts as post}
+				<li>
+					<a href={`posts/${post.id}`}>{post.title}</a>
+				</li>
+			{/each}
+		</ol>
+	</div>
+</div>
